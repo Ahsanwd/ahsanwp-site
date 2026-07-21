@@ -12,8 +12,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-md dark:border-zinc-800 dark:bg-black/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold tracking-tight text-zinc-950 dark:text-white">
-          Ahsan<span className="text-indigo-600">WP</span>
+        <Link href="/" className="text-xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
+          Ahsan
+          <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">WP</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -39,7 +40,7 @@ export default function Header() {
           href={whatsappLink("Hi! I'd like to talk about a WordPress project.")}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-500 md:inline-block"
+          className="hidden rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-500/30 transition-transform hover:scale-105 md:inline-block"
         >
           Let&apos;s Talk
         </a>
