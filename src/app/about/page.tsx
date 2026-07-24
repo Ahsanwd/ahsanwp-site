@@ -7,6 +7,63 @@ export const metadata: Metadata = {
   description: "AhsanWP is a WordPress and LearnPress specialist focused on fast, direct, honest project delivery.",
 };
 
+const skillGroups = [
+  {
+    category: "Page Builders & Design",
+    items: [
+      { name: "Elementor", icon: "🎨" },
+      { name: "Gutenberg (Block Editor)", icon: "🧱" },
+      { name: "Custom Theme Development", icon: "💻" },
+    ],
+  },
+  {
+    category: "Forms & Email",
+    items: [
+      { name: "WPForms", icon: "📝" },
+      { name: "Contact Form 7", icon: "📋" },
+      { name: "Fluent Forms", icon: "🗂️" },
+      { name: "SMTP / Email Configuration", icon: "📧" },
+      { name: "Transactional Email (Resend, SMTP.com)", icon: "✉️" },
+    ],
+  },
+  {
+    category: "LMS & Membership",
+    items: [
+      { name: "LearnPress", icon: "🎓" },
+      { name: "Tutor LMS", icon: "📚" },
+      { name: "Quiz & Grading Systems", icon: "✅" },
+      { name: "Membership & Subscription Flows", icon: "🔐" },
+      { name: "Video Hosting (Bunny.net, Vimeo)", icon: "🎬" },
+    ],
+  },
+  {
+    category: "E-commerce & Payments",
+    items: [
+      { name: "WooCommerce", icon: "🛒" },
+      { name: "Stripe Integration", icon: "💳" },
+      { name: "Subscription Billing", icon: "🔁" },
+    ],
+  },
+  {
+    category: "SEO & Performance",
+    items: [
+      { name: "Yoast SEO", icon: "🔍" },
+      { name: "RankMath", icon: "📈" },
+      { name: "Caching (WP Rocket / LiteSpeed)", icon: "⚡" },
+      { name: "Image Optimization", icon: "🖼️" },
+      { name: "Core Web Vitals", icon: "📊" },
+    ],
+  },
+  {
+    category: "Security & Maintenance",
+    items: [
+      { name: "Wordfence", icon: "🛡️" },
+      { name: "UpdraftPlus Backups", icon: "💾" },
+      { name: "Core & Plugin Updates", icon: "🔄" },
+    ],
+  },
+];
+
 const values = [
   {
     title: "Direct communication",
@@ -62,6 +119,37 @@ export default function About() {
               </div>
               <h3 className="mt-4 font-semibold text-zinc-950 dark:text-white">{v.title}</h3>
               <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{v.desc}</p>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+
+      <FadeIn className="mt-20">
+        <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
+          Tools & Skills
+        </h2>
+        <p className="mt-3 max-w-2xl text-zinc-600 dark:text-zinc-400">
+          The WordPress ecosystem, hands-on — not just the headline plugins, but the
+          configuration details that actually make a site work end to end.
+        </p>
+      </FadeIn>
+
+      <div className="mt-10 space-y-8">
+        {skillGroups.map((group, i) => (
+          <FadeIn key={group.category} delay={i * 0.06}>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
+              {group.category}
+            </h3>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              {group.items.map((item) => (
+                <span
+                  key={item.name}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-indigo-800 dark:hover:bg-indigo-950/30 dark:hover:text-indigo-300"
+                >
+                  <span>{item.icon}</span>
+                  {item.name}
+                </span>
+              ))}
             </div>
           </FadeIn>
         ))}
