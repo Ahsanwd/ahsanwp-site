@@ -150,28 +150,6 @@ export default function Home() {
           </Link>
         </FadeIn>
       </section>
-
-      <section className="relative overflow-hidden border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
-        <GradientOrbs variant="section" />
-        <div className="relative mx-auto max-w-6xl px-6 py-24 text-center">
-          <FadeIn>
-            <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl dark:text-white">
-              Have a project in mind?
-            </h2>
-            <p className="mx-auto mt-3 max-w-md text-zinc-600 dark:text-zinc-400">
-              Tell me about it on WhatsApp — I usually reply within the hour.
-            </p>
-            <a
-              href={whatsappLink("Hi! I'd like to talk about a WordPress project.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-block rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-transform hover:scale-105"
-            >
-              Message on WhatsApp
-            </a>
-          </FadeIn>
-        </div>
-      </section>
     </div>
   );
 }
