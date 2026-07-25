@@ -99,14 +99,14 @@ export default function About() {
               , one project at a time
             </h1>
 
-            <div className="mt-6 max-w-2xl space-y-5 text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8 dark:text-zinc-400">
-              <p>
+            <div className="mt-6 max-w-2xl space-y-4 rounded-2xl border border-zinc-200/70 bg-white/70 p-5 shadow-sm backdrop-blur-sm sm:space-y-5 sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-none dark:border-zinc-800/70 dark:bg-zinc-900/50">
+              <p className="text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8 dark:text-zinc-400">
                 AhsanWP is a solo-run WordPress development studio. I build business
                 websites, but my real specialty is LearnPress-based course and
                 membership platforms — structuring courses, wiring up quizzes and
                 grading logic, and getting video delivery right.
               </p>
-              <p>
+              <p className="text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8 dark:text-zinc-400">
                 I keep the studio small on purpose: fewer projects, more attention
                 on each one, and a direct WhatsApp line instead of a support ticket
                 queue. If something needs fixing, you&apos;ll hear back the same day.
