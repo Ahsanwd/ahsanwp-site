@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { whatsappLink } from "@/lib/constants";
 import GradientOrbs from "@/components/GradientOrbs";
 import HeroVisual from "@/components/HeroVisual";
@@ -175,9 +176,13 @@ export default function Home() {
                 for was turned around quickly. Highly recommend for any WordPress or LMS project.&rdquo;
               </p>
               <div className="mt-6 flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-base font-semibold text-white shadow-lg shadow-indigo-500/20">
-                  TL
-                </div>
+                <Image
+                  src="/images/testimonials/tevi-lawson.jpg"
+                  alt="Tevi D. Lawson"
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 shrink-0 rounded-full object-cover shadow-lg shadow-indigo-500/20"
+                />
                 <div>
                   <p className="text-sm font-semibold text-zinc-950 dark:text-white">Tevi D. Lawson</p>
                   <p className="text-sm text-zinc-500 dark:text-zinc-500">Founder, ELSAH Sanctuary · USA</p>
