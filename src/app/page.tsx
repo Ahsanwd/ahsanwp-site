@@ -27,7 +27,7 @@ const services = [
   },
 ];
 
-const trustPoints = ["LearnPress Experts", "Fast Turnaround", "Direct WhatsApp Support"];
+const trustPoints = ["Full-Service WordPress Builds", "LearnPress & LMS Specialists", "Direct WhatsApp Support"];
 
 export default function Home() {
   return (
@@ -37,7 +37,7 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-24 sm:py-32 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
-              WordPress & LMS Development
+              Full-Service WordPress Development
             </p>
             <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-zinc-950 sm:text-6xl dark:text-white">
               WordPress Sites That{" "}
@@ -47,9 +47,10 @@ export default function Home() {
               as You Do
             </h1>
             <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-              From LMS platforms to business sites — built fast, built right,
-              backed by real support. No agency runaround, just direct
-              communication with the person doing the work.
+              Business websites, online stores, membership platforms, and LMS
+              course sites — built fast, built right, backed by real support.
+              No agency runaround, just direct communication with the person
+              doing the work.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a

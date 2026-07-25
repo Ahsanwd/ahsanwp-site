@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AhsanWP — WordPress & LMS Websites Built Fast",
+  title: "AhsanWP — WordPress Development & Design",
   description:
-    "AhsanWP builds WordPress business sites, LearnPress course platforms, and membership sites — fast turnaround, direct WhatsApp support.",
+    "AhsanWP builds WordPress business websites, online stores, membership platforms, and LearnPress course sites — fast turnaround, direct WhatsApp support.",
 };
 
 export default function RootLayout({
