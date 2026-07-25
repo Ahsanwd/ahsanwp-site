@@ -115,7 +115,36 @@ export default function Home() {
           ))}
         </div>
 
-        <FadeIn delay={0.3} className="mt-10">
+        <FadeIn delay={0.32} className="mt-8">
+          <div className="relative overflow-hidden rounded-2xl border border-transparent bg-gradient-to-br from-indigo-50 to-violet-50 p-6 shadow-lg shadow-indigo-500/10 before:absolute before:-inset-px before:-z-10 before:rounded-2xl before:bg-gradient-to-r before:from-indigo-500 before:to-violet-500 sm:p-8 dark:from-indigo-950/40 dark:to-violet-950/30">
+            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 text-2xl shadow-lg shadow-indigo-500/20">
+                  🔧
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-zinc-950 dark:text-white">
+                    Already have a WordPress site?
+                  </h3>
+                  <p className="mt-1.5 max-w-xl text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                    Any custom functionality, feature, fix, or integration your existing site needs — I can build
+                    it. No full rebuild required.
+                  </p>
+                </div>
+              </div>
+              <a
+                href={whatsappLink("Hi! I have an existing WordPress site and need some custom work done.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-transform hover:scale-105"
+              >
+                Tell Me What You Need
+              </a>
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.4} className="mt-6">
           <Link href="/services" className="text-sm font-semibold text-indigo-600 hover:text-indigo-500">
             View all services →
           </Link>

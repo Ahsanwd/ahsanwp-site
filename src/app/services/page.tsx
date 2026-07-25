@@ -16,6 +16,12 @@ const services = [
     icon: "🌐",
   },
   {
+    title: "Custom Work on Existing WordPress Sites",
+    desc: "Already have a WordPress or LearnPress site? Any custom functionality, feature, fix, or integration it needs — I can build it, no full rebuild required.",
+    items: ["Custom plugin & feature development", "Bug fixes & site troubleshooting", "Third-party API integrations", "Theme/plugin conflict resolution"],
+    icon: "🔧",
+  },
+  {
     title: "LMS & Course Platforms (LearnPress)",
     desc: "End-to-end course platforms — from course structuring to quizzes, memberships, and video hosting.",
     items: ["Course & lesson structuring", "Quiz systems with grading logic", "Video hosting via CDN (Bunny.net)", "Certificates & student progress tracking"],
