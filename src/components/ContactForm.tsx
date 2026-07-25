@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { whatsappLink } from "@/lib/constants";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -11,7 +11,12 @@ export default function ContactForm() {
   const [projectType, setProjectType] = useState("WordPress Website");
   const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
+  const [company, setCompany] = useState(""); // honeypot — real users never see or fill this
   const [status, setStatus] = useState<Status>("idle");
+  const loadedAt = useRef(0);
+  useEffect(() => {
+    loadedAt.current = Date.now();
+  }, []);
 
   const buildWhatsAppMessage = () =>
     [
@@ -32,7 +37,15 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, projectType, budget, message }),
+        body: JSON.stringify({
+          name,
+          email,
+          projectType,
+          budget,
+          message,
+          company,
+          elapsedMs: Date.now() - loadedAt.current,
+        }),
       });
 
       if (!res.ok) throw new Error("Request failed");
@@ -60,6 +73,19 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot — hidden from real users, bots tend to fill every field */}
+      <div className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+        <label htmlFor="company">Company</label>
+        <input
+          id="company"
+          name="company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-zinc-950 dark:text-white">
           Name

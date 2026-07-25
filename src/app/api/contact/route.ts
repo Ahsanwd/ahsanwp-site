@@ -4,15 +4,24 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = process.env.CONTACT_EMAIL_TO ?? "ahsanspo@gmail.com";
 
+const MIN_SUBMIT_MS = 3000;
+
 export async function POST(request: Request) {
   const body = await request.json();
-  const { name, email, projectType, budget, message } = body as {
+  const { name, email, projectType, budget, message, company, elapsedMs } = body as {
     name?: string;
     email?: string;
     projectType?: string;
     budget?: string;
     message?: string;
+    company?: string;
+    elapsedMs?: number;
   };
+
+  // Honeypot filled or form submitted too fast to be human — pretend success, drop silently.
+  if (company || typeof elapsedMs !== "number" || elapsedMs < MIN_SUBMIT_MS) {
+    return NextResponse.json({ ok: true });
+  }
 
   if (!name || !email || !message) {
     return NextResponse.json(
