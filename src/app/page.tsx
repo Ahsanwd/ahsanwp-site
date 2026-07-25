@@ -150,6 +150,43 @@ export default function Home() {
           </Link>
         </FadeIn>
       </section>
+
+      <section className="relative overflow-hidden border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
+        <GradientOrbs variant="section" />
+        <div className="relative mx-auto max-w-3xl px-6 py-24">
+          <FadeIn className="text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 sm:text-4xl dark:text-white">
+              What Clients Say
+            </h2>
+          </FadeIn>
+
+          <FadeIn delay={0.1} className="mt-12">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-xl shadow-indigo-500/10 sm:p-10 dark:border-zinc-800 dark:bg-zinc-900">
+              <div className="flex gap-1 text-amber-400">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="mt-5 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+                &ldquo;Ahsan rebuilt our membership site and video platform exactly the way we envisioned
+                it — responsive, fast, and reliable. Communication was direct, and every change we asked
+                for was turned around quickly. Highly recommend for any WordPress or LMS project.&rdquo;
+              </p>
+              <div className="mt-6 flex items-center gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-base font-semibold text-white shadow-lg shadow-indigo-500/20">
+                  TL
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-zinc-950 dark:text-white">Tevi D. Lawson</p>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-500">Founder, ELSAH Sanctuary · USA</p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
     </div>
   );
 }
